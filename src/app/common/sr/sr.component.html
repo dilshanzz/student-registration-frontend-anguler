@@ -1,15 +1,15 @@
 <form>
     <div class="mb-3">
         <label for="first-name" class="form-label">First name</label>
-        <input type="text" class="form-control" id="first-name" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="first-name" [(ngModel)]="student.firstName" [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp">
       </div>
       <div class="mb-3">
         <label for="last-name" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="last-name" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="last-name" [(ngModel)]="student.lastName" [ngModelOptions]="{standalone: true}"  aria-describedby="emailHelp">
       </div>  
       <div class="mb-3">
         <label for="contact" class="form-label">contact</label>
-        <input type="text" class="form-control" id="contact" aria-describedby="emailHelp">
+        <input type="text" class="form-control" id="contact" [(ngModel)]="student.contact" [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp">
       </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" (click)="createStudent()" class="btn btn-primary">Submit</button>
   </form>
